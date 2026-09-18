@@ -1,0 +1,8 @@
+[project]
+version = "0.0.0"
+
+[dependencies]
+
+[targets]
+type = "library"
+entrypoint = "src/main.can"

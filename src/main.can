@@ -1,0 +1,18 @@
+ext use stdarg;
+ext use stdio;
+mod std;
+
+pub fun std::print(con char *format, ...) void {
+  let va_list args;
+  va_start(args, format);
+  vprintf(format, args);
+  va_end(args);
+}
+
+pub fun std::println(con char *format, ...) void {
+  let va_list args;
+  va_start(args, format);
+  vprintf(format, args);
+  putchar('\n');
+  va_end(args);
+}
